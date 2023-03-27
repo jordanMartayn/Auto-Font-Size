@@ -6,22 +6,28 @@ See the autoFontSize.html file for the live example(requires autoFontSize.js fil
 
 Usage:
 
-1.Inlude the js file:
-<script src="autoFontSize.js"></script>  
+1.Include the js file:   <br>
+```html 
+<script src="autoFontSize.js"></script>
+```
   
-2.Get the desired element via any varriable:
+2.Get the desired element via any method:
+```html
 <script>
-const element = document.getElementById("div_id);   
-</script>  
+  const element = document.getElementById("div_id);   
+</script>
+```
   
-3.call autoFontSize(); and pass it said element.  
+3.call autoFontSize(); and pass it said element.
+```html
 <script>  
   
   const element = document.getElementById("div_id);  
     
   autoFontSize(element);  
   
-</script>  
+</script>
+```
   
 4.done!
 
