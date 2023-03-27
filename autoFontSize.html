@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                display: grid;
+                grid-template-columns: 400px 400px 400px 1fr;
+                grid-template-rows: 400px;
+            }
+            .div-cs{
+                grid-row: 1/2;
+                height: 400px;
+                background-color: blanchedalmond;
+                font-size: 200px;
+                display: inline-block;
+                border: black 1px solid;
+                resize: both;
+                overflow: auto;
+                
+            }
+            h1{
+                grid-column: 1/5;
+            }
+        </style>
+        <script src="autoFontSize.js"></script>
+    </head>
+    <body>
+        <h1>Try changing the page zoom level, ctrl + and ctrl -<br>
+        The first div is editable, which doesn't work perfectly because of the overflow<br>
+        The rest of the divs are resizeable. Give it a go. </h1>
+        <script>
+            function createDiv01() {
+                const div = document.createElement("div");
+                div.className = "div-cs";
+                div.contentEditable = true;
+                div.innerHTML = `This is an atempt at making a tool for myself, I'm sure there are 
+                better tools out there but I thought It would be a good learning experience. 
+                The idea is that font size will be controled by the size of It's container. 
+                I'm sure there is a better way of doing this but it was interesting all the same. 
+                My attempt is still buggy and there are cases where it doesnt quiet work.
+                Additionally this was made with Chrome in mind, it doesn't work as well with firefox`
+                document.body.appendChild(div);
+                autoFontSize(div); //Implementation
+            };
+            function createDiv02() {
+                const div = document.createElement("div");
+                div.className = "div-cs";
+                div.innerHTML = `It seems the longer the text the better it will fit firefox and
+                where as chrome has more empty space, some empty space was intended as a buffer`
+                document.body.appendChild(div);
+                autoFontSize(div); //Implementation
+            };
+            function createDiv03() {
+                const div = document.createElement("div");
+                div.className = "div-cs";
+                div.innerHTML = `the way this effect was achieved is by documenting what was the
+                appropriet font size based on the area of the box. Graphing the results and applying
+                the line of best fit equation to decide on the text size. This documentation process
+                was done via Chrome` 
+                document.body.appendChild(div);
+                autoFontSize(div); //Implementation
+            };
+            function createDiv04() {
+                const div = document.createElement("div");
+                div.className = "div-cs";
+                div.innerHTML = `The line of best fit is broken into sections based on the text's
+                length for better accuracy. This formular is based on a 1/1 aspect ratio. Too narrow
+                and it will overlap too wide there will be tonnes of white space.`  
+                document.body.appendChild(div);
+                div.addEventListener("load", () => {alert("sd")});
+                autoFontSize(div); //Implementation
+            };
+            
+            createDiv01(); 
+            createDiv02();
+            createDiv03();
+            createDiv04(); 
+
+
+        </script>
+    </body>
+</html>
