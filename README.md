@@ -4,6 +4,9 @@ The functions listens for input, in the case of contentEditable=true, window res
 
 See the autoFontSize.html file for the live example(requires autoFontSize.js file in the same folder)
 
+https://user-images.githubusercontent.com/128806541/227926139-a8131914-ac6d-4279-8486-f10c259fe596.mp4
+
+
 Usage:
 
 1.Include the js file:   <br>
